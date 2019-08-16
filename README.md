@@ -4,4 +4,4 @@ A visual sound kit application created with JavaScript and its Paper.js,  Howler
 
 # Available at
 
-http://baltakisdev.com/Patatap
+http://baltakisdev.com/patatap
