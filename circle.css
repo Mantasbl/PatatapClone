@@ -2,11 +2,31 @@ canvas {
     width: 100%;
     height: 100%;
     background:black;
-    
-    
+
 }
 body,html{
     height: 100%;
     margin:0;
     overflow-y: hidden;
+}
+
+#guide {
+  color:white;
+  font-family: helvetica;
+  width: 500px;
+  height: 200px;
+  position: fixed;
+  margin:100px 0 0 100px;
+}
+
+#guide-off {
+  font-size: 30px;
+  position: absolute;
+  margin: 10px 0 0 460px;
+  padding:0;
+  text-decoration: none;
+  color: yellow;
+  border:none;
+  background-color: transparent;
+  cursor:pointer;
 }

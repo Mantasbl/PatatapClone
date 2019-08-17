@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8"/>
         <title>Circles</title>
         <script type="text/javascript" src="paper-full.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.8/howler.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
         <script type="text/paperscript" canvas="myCanvas">
             var keyData = {
 	q: {
@@ -163,10 +165,10 @@
 		color: '#2c3e50'
 	}
 }
-            
 
-            
-            
+
+
+
             var circles = [];
             function onKeyDown(event) {
                 if (keyData[event.key]) {
@@ -176,14 +178,14 @@
                 var newCircle = new Path.Circle(point, 300);
                 newCircle.fillColor = keyData[event.key].color;
                 keyData[event.key].sound.play();
-                
-                
-                circles.push(newCircle);  
+
+
+                circles.push(newCircle);
                 }
-                      
+
             }
-            
-            
+
+
             function onFrame(event) {
                 for(var i = 0; i < circles.length; i++){
                 circles[i].scale(0.9);
@@ -196,13 +198,22 @@
                 }
               }
             }
-            
+
         </script>
         <link rel="stylesheet" type="text/css" href="circle.css">
 
     </head>
-    
+
     <body>
+      <section id="guide">
+        <button id="guide-off"><i class="fas fa-times"></i></button>
+        <h1 id="guide-title">Welcome to Patatap</h1>
+        <p id="guide-description">Use it by pressing any letter on your keyboard to produce different sounds
+        </p>
+
+      </section>
+
     	<canvas id="myCanvas" resize></canvas>
+      <script type="text/javascript" src="guide.js"></script>
     </body>
 </html>
